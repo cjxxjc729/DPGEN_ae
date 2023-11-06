@@ -1,0 +1,290 @@
+run mc
+sleep 1m
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有1个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有1个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有1个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有1个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有1个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有1个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:   有2个任务正在跑
+./mc/seed1 RUNNING
+
+[holdon_wait_following_dir_done_V2.sh ]: 还有没跑完的任务, 等20秒再看看 
+ 
+[check_job_in_subdirs.sh, ./mc/seed1 ]:  jobs all done
+collect mc results
+

@@ -1,0 +1,246 @@
+# Test of MEAM potential for SiC system
+units           metal
+boundary        p p p
+atom_style      atomic
+atom_modify     map array sort 0 0.0
+
+#设定初始能量为0
+variable        Etot equal 0
+
+label           loopb
+variable        b loop 10
+if              "${b} == 1" then &
+                "read_data       1st_ann.data" &
+                else &
+                "read_restart     restart.equil"
+
+mass            1 58.93300
+mass            2 63.546000
+mass            3 54.938
+mass            4 95.9400
+mass            5 95.9400
+
+#pair_style      deepmd graph.001.pb graph.000.pb graph.002.pb graph.003.pb  out_freq 100 out_file model_devi.out
+pair_style      deepmd graph.000.pb
+pair_coeff      * * 
+neighbor        2.0 bin
+neigh_modify    every 10 delay 0 check no
+
+
+#-----------------------some global parameters----------------
+#variable        u0Ms vector [0.844,0,0.481,0.024,1.152]
+#variable        u0Ms index 0.844 0 0.481 0.024 0.024
+
+
+
+compute          ae0 all pe/atom
+
+#variable         ae0_all equal c_ae0  #(X) 
+#use the folliwng instead
+label         loop_atm_id
+variable      atm_id loop 40
+  variable        ae0_${atm_id} equal c_ae0[${atm_id}]
+next atm_id
+jump SELF loop_atm_id
+ 
+  
+
+thermo              1
+#thermo_style        custom step pe v_ae0_all[1] v_ae0_all[2]  (x)
+#use the folliwng instead
+thermo_style        custom step v_ae0_1 v_ae0_2 v_ae0_3 v_ae0_4 v_ae0_5 v_ae0_6 v_ae0_7 v_ae0_8 v_ae0_9 v_ae0_10 v_ae0_11 v_ae0_12 v_ae0_13 v_ae0_14 v_ae0_15 v_ae0_16 v_ae0_17 v_ae0_18 v_ae0_19 v_ae0_20 v_ae0_21 v_ae0_22 v_ae0_23 v_ae0_24 v_ae0_25 v_ae0_26 v_ae0_27 v_ae0_28 v_ae0_29 v_ae0_30 v_ae0_31 v_ae0_32 v_ae0_33 v_ae0_34 v_ae0_35 v_ae0_36 v_ae0_37 v_ae0_38 v_ae0_39 v_ae0_40 pe 
+
+variable        e equal pe
+variable        seed equal 582783
+fix             2 all nvt temp 3000.0 3000.0 1.0
+
+#设定构型跑一下，获取能量
+
+run             0
+
+variable        step equal 1
+variable        dumpa equal 1
+variable        dumpa1 equal 1
+variable        next_refresh_us_step equal 500
+
+#--------------------------------------------------------------
+print           "b time is ${b}"
+
+#shell           ./calculate_nk_values.sh
+
+#-----------------------entering the main loop-------------------
+
+label           loopa
+variable        a loop 5000
+print           "-------==begin of a new loop ${b}_${a} ==--------"
+print           ""
+
+if              "${b} >= 9" then &
+                "dump            ${a} all custom 1 traj/${b}_${a}.lammpstrj id type x y z" &
+                "variable        dumpa equal ${dumpa}+10"
+
+
+
+
+variable        01_switch  equal  0
+
+#if              "${a} == ${dumpa}" then &
+#                "dump            ${a} all custom 1 traj/${b}_${a}_0.lammpstrj id type x y z" &
+#                "variable        dumpa equal ${dumpa}+100"
+
+#compute         temp$a all temp
+#run             0
+
+timestep        0.001  # 0.001 means 1fs
+
+#----------------------swithc di1 and id2 ------------------------#
+#----------------id 1 and id 2 chosen----------------------
+#
+group           mc_atoms type 1 2 3 4 5
+variable        N_mc_atoms equal count(mc_atoms)
+
+label           loop_site_select
+variable        a1 loop 100
+
+variable        irandom equal floor(${N_mc_atoms}*random(0.0,1.0,${seed})+1)
+variable        id1 equal ${irandom}
+variable        id2 equal ${irandom}
+variable        typet equal type[${id1}]
+variable        type1 equal ${typet}
+variable        typet equal type[${id2}]
+variable        type2 equal ${typet}
+print           "id1 is ${id1},   id2 is ${id2}"
+print           "type1 is ${type1}, type2 is ${type2}"
+if              "${type1} != ${type2}" then &
+                  "print 'types for switch are different, quit loop_site_select'" &
+                  "jump SELF break_site_select" &
+                else &
+                  "print 'types for switch are the same, repeat !'"
+
+
+next            a1
+jump            SELF loop_site_select
+label           break_site_select
+
+#----------------end ------------------------------------------
+
+
+#----------------------获取V_before，更换atom id1的种类
+#
+#最终目的是交换id1和id2, 但是不能直接交换. 而是要分成两步. 第一步是将id1的原子的type换成type2, 求算能量变化deltaV1; 而后将id2的原子种类换成type1, 求算能量的变化deltaV2.
+#
+#deltaV1 = ae的变化, 需要交换以后run一次;  同样的, deltaV2 = ae的变化, 需要交换以后run一次. 凡两次
+#
+#
+#上面thermo 设定为1， thermo_style规定要输出每一个原子能。因此在a和b的循环内部，可以直接用v_ae0_${id1}获取原子能。每run一次，v_ae0_${id1}会更新
+#
+variable        Vt equal v_ae0_${id1}
+variable        V11 equal ${Vt}
+print           "V1_before = ${V11}"
+set             atom ${id1} type ${type2}
+#
+#
+#此处设定，下一次run以后，输出${b}_${a}_1.lammpstr。这里仅为了测试使用。真实跑的时候，要删掉
+#
+#if              "${a} == ${dumpa1}" then &
+#                "dump            ${a}_index1 all custom 1 traj/${b}_${a}_1.lammpstrj id type x y z" &
+#                "variable        dumpa1 equal ${dumpa1}+100"
+
+run             0
+
+variable        Vt equal v_ae0_${id1}
+variable        V12 equal ${Vt}
+print           "V1_after = ${V12}"
+
+variable        deltaV1 equal ${V12}-${V11}
+print           "deltaV1 = ${deltaV1}"
+
+# 接下来是第二步. 将id2的原子换成
+#
+variable        Vt equal v_ae0_${id2}
+variable        V21 equal ${Vt}
+print           "V2_before = ${V21}"
+set             atom ${id2} type ${type1}
+
+run             0
+
+variable        Vt equal v_ae0_${id2}
+variable        V22 equal ${Vt}
+print           "V2_after = ${V22}"
+
+variable        deltaV2 equal ${V22}-${V21}
+print           "deltaV2 = ${deltaV2}"
+
+variable        deltaG equal ${deltaV1}+${deltaV2}
+
+#----------ITS method insert --------------------------------------
+#
+#variable        exp_U_dot  equal 0
+variable        R   equal  8.68289E-05
+variable        T_sys equal 300
+#variable        T_interval equal 100
+
+#label           loopc
+#variable        c loop 10
+#  variable        n_k file 00.M_nk_values/M_nk_${c}.txt
+#  print           'M_nk_${c} = ${n_k}'
+#  variable        T equal (${c}-1)*${T_interval}+${T_sys}
+#  variable        beta_k equal 1/(${T}*${R})
+#  variable        Pi equal ${n_k}*exp(-${beta_k}*${deltaG})
+#  variable        exp_U_dot equal ${exp_U_dot}+${n_k}*exp(-${beta_k}*${deltaG})
+#  print           'Pi_${T} K = ${Pi}'
+
+#
+#  variable        n_k delete
+#  variable        T delete
+#  variable        beta_k delete
+#  variable        Pi delete
+
+#next c
+#jump SELF loopc
+
+#variable        deltaG_dot equal -${R}*${T_sys}*ln(${exp_U_dot})
+#print           'deltaG_dot = ${deltaG_dot}'
+#
+##-----------------------------------
+variable        rn equal random(0.0,1.0,${seed})
+
+
+
+variable        fmetropolice equal exp((-${deltaG})/(${R}*${T_sys}))  #if deltaG<0 accept
+print           '  fmetropolice =${fmetropolice}'
+if              "${fmetropolice}>1" then &
+                  "variable accpro equal 1" &
+                else &
+                  "variable accpro equal ${fmetropolice}"
+
+print           'accpro =${accpro}'
+print           'rn = ${rn}'
+
+if              "${rn}<${accpro}" then &
+                  "print  'accept the change'" &
+                  "variable Etot equal ${Etot}+${deltaG}" &
+                else &
+                  "print  'reject the change, reverse the cordination'" &
+                  "set             atom ${id1} type ${type1} " &
+                  "set             atom ${id2} type ${type2} "
+
+
+variable        step equal ${step}+1
+print           "  step =${step}"
+print           'summary: switch id ${id1} to id ${id2}'
+print           "Etot = ${Etot}"
+print           "-------===--------"
+
+
+
+next a
+jump SELF loopa
+write_restart restart.equil  #when a loop is end, save it to restart.equil, and clear the memory
+clear 
+next b
+jump SELF loopb  
+
+
+
+
