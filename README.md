@@ -5,8 +5,7 @@ The modified DPGEN workflow of atomic swap MC simulation in HEA
 
 This project uses a modified DPGEN workflow to simulate the element distribution of high entropy materials. We use MC simulation combined with an active learning scheme based on machine learning potential to selectively tag atomic energy and gradually improve the force field. Finally, we use the obtained force field to train a larger model.
 
-![fig4_test](https://github.com/cjxxjc729/DPGEN_ae/assets/42018996/22a6beb1-88e3-4dae-8a70-323262206546)
-
+![fig4_test](https://github.com/cjxxjc729/DPGEN_ae/assets/42018996/5c8ca971-e2aa-4e37-b490-c861c3a3f41c)
 
 # Installation
 
