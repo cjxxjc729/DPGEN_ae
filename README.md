@@ -9,14 +9,12 @@ This project uses a modified DPGEN workflow to simulate the element distribution
 
 # Installation
 
-运行本项目前, 先运行
+Before running this project, run
 source ~/scripts/env.sh
 
-后使用next_iter.sh, 建立新的iter, 进入后依次进入01, 02, 03三个文件夹, 分别运行./train.sh, ./exploration.sh ./labelling.sh 执行
-
-./train.sh 结束后可运行validate_ae_dft_dp.sh来验证dft和dp的关系
+Then use next_iter.sh, create a new iter, enter the folder 01, 02, 03, run. /train.sh, . /exploration.sh . /labelling.sh Execute
 
 # testing_programme
-正在开发中
+Under development
 
 
