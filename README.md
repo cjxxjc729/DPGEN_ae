@@ -7,7 +7,8 @@ This project uses a modified DPGEN workflow to simulate the element distribution
 
 # Installation
 
-![Uploading image.png…]()
+
+![工作流程图](https://github.com/cjxxjc729/DPGEN_ae/assets/42018996/025ca0e9-3380-419c-8ace-0b41679d16b2)
 
 source ~/scripts/env.sh
 
