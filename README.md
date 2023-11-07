@@ -7,6 +7,7 @@ This project uses a modified DPGEN workflow to simulate the element distribution
 
 # Installation
 
+![Uploading image.png…]()
 
 source ~/scripts/env.sh
 
